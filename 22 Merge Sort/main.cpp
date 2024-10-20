@@ -3,23 +3,25 @@
 using namespace std;
 
 int array[5] = {4, 6, 7, 3, 1}, n = 5;
-void merge(int p, int q, int r){
-    int n1 = q-p+1;
-    int n2 = r-q;
+// left midium right
+    // p    q       r
+void merge(int left, int medium, int right){
+    int n1 = medium-left+1;
+    int n2 = right-medium;
     int array1[n1], array2[n2];
     for (int i = 0; i < n1; i++)
     {
-       array1[i] = array[p+i];
+       array1[i] = array[left+i];
     }
 
      for (int j = 0; j < n2; j++)
     {
-       array2[j] = array[q+1+j];
+       array2[j] = array[medium+1+j];
     }
     int i, j, k;
     i = 0;
     j = 0;
-    k = p;
+    k = left;
     while (i<n1 && j<n2)
     {
         if (array1[i] <= array2[j])
