@@ -11,10 +11,15 @@ void Swap(int* a, int* b){
 }
 
 int Partition(int low, int high){
+    // Selecting last element as the pivot
     int pivot = array[high];
-    int i = (low -1);
+    // Index of elemment just before the last element
+    // It is used for swapping
+    int i = (low -1); // -1
     for (int j = low; j < high; j++)
     {
+        // If current element is smaller than or
+        // equal to pivot
        if (array[j] <= pivot)
        {
         i++;
@@ -22,15 +27,23 @@ int Partition(int low, int high){
        }
        
     }
+     // Put pivot to its position
     Swap(&array[i+1], &array[high]);
+     // Return the point of partition
     return (i+1);
     
 }
 
 void QuickSort(int low, int high){
+     // Base case: This part will be executed till the starting
+    // index low is lesser than the ending index high
     if (low < high)
     {
+        // pi is Partitioning Index, arr[p] is now at
+        // right place
         int pi = Partition(low, high);
+        // Separately sort elements before and after the
+        // Partition Index pi
         QuickSort(low, pi-1);
         QuickSort(pi+1, high);
     }
