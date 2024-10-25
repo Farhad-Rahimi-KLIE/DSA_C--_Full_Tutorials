@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 21,
-      "versionNonce": 1996290338,
+      "version": 22,
+      "versionNonce": 1773420219,
       "isDeleted": false,
       "id": "YNpJ6C59mvJZbWHeZMe4Y",
       "fillStyle": "solid",
@@ -26,7 +26,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1729587181370,
+      "updated": 1729761448646,
       "link": null,
       "locked": false,
       "fontSize": 36,
@@ -41,8 +41,8 @@
     },
     {
       "type": "image",
-      "version": 90,
-      "versionNonce": 1023802343,
+      "version": 135,
+      "versionNonce": 912342203,
       "isDeleted": false,
       "id": "o_09c1pax8adjG6W2I9oo",
       "fillStyle": "solid",
@@ -51,8 +51,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 356.47786458333337,
-      "y": 171,
+      "x": 347.47786458333337,
+      "y": 190,
       "strokeColor": "transparent",
       "backgroundColor": "transparent",
       "width": 594.0442708333333,
@@ -61,8 +61,13 @@
       "groupIds": [],
       "frameId": null,
       "roundness": null,
-      "boundElements": [],
-      "updated": 1728882422521,
+      "boundElements": [
+        {
+          "id": "085jVcbQNy3J0bSRFKO4x",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1729761462163,
       "link": null,
       "locked": false,
       "status": "pending",
@@ -74,8 +79,8 @@
     },
     {
       "type": "arrow",
-      "version": 10,
-      "versionNonce": 629896041,
+      "version": 11,
+      "versionNonce": 929101851,
       "isDeleted": false,
       "id": "085jVcbQNy3J0bSRFKO4x",
       "fillStyle": "solid",
@@ -97,10 +102,14 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1728882434460,
+      "updated": 1729761462163,
       "link": null,
       "locked": false,
-      "startBinding": null,
+      "startBinding": {
+        "elementId": "o_09c1pax8adjG6W2I9oo",
+        "focus": 0.038717653092984625,
+        "gap": 28.013177159589986
+      },
       "endBinding": {
         "elementId": "QmUlZ-8yFTLo9BKyLkcHf",
         "focus": -0.06909090909090909,

@@ -2,21 +2,36 @@
 
 using namespace std;
 
-struct Node // make a node for linked list
+struct Node
 {
-        int data; // 
-        Node *next; // pointer to point next node data;
+    int data;
+    Node *next;
 };
 
-Node *head = NULL; // this is a head of Linked list
+Node *head = NULL;
 
-void Insert(int x){
-    Node *newNode = new Node; // allocated dynamic memory allocation
-    newNode->data = x;
+void Insert(int n){
+    Node *newNode = new Node;
+    newNode->data = n;
     newNode->next = head;
     head = newNode;
 }
 
+void InsertEnd(int n){
+    Node *newNode = new Node;
+    newNode->data = n;
+    newNode->next = NULL;
+    if (head == NULL)
+    {
+        head = newNode;
+    }
+    Node *temp = head;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = newNode;   
+}
 void display(){
     cout<<"Data Element in the single liked list is here :";
     Node *temp = head;
@@ -25,15 +40,14 @@ void display(){
         cout<<temp->data<<" ";
         temp = temp->next;
     }
-    
-
 }
 
 int main()
 {
-    Insert(1);
-    Insert(2);
-    Insert(3);
+    Insert(10);
+    Insert(20);
+    Insert(30);
+    InsertEnd(40);
     display();
-    return 0;   
+    return 0;
 }
