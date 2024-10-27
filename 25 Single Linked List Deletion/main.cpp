@@ -1,5 +1,11 @@
 #include<iostream>
 
+/*
+  Delete first - have a 2 Possibbleties
+  Delete Last - have a 3 Possibbleties
+  Delete Position - have a 4 Possibbleties
+*/
+
 using namespace std;
 
 struct Node
