@@ -2,7 +2,7 @@
 
 using namespace std;
 
-struct Node
+struct Node // Structure of Node
 {
     int data;
     Node *next;
@@ -10,44 +10,49 @@ struct Node
 
 Node *head = NULL;
 
-void Insert(int n){
-    Node *newNode = new Node;
+void InsertAtFirst(int n){   //   10    head
+    Node *newNode = new Node; // data, *next
     newNode->data = n;
     newNode->next = head;
     head = newNode;
 }
 
-void InsertEnd(int n){
-    Node *newNode = new Node;
-    newNode->data = n;
-    newNode->next = NULL;
-    if (head == NULL)
-    {
-        head = newNode;
-    }
+int getCount() 
+{ 
+    // Initialize count 
+    int count = 0; 
+ 
+    // Initialize current 
     Node *temp = head;
-    while (temp->next != NULL)
-    {
-        temp = temp->next;
-    }
-    temp->next = newNode;   
+    while (temp != NULL) 
+    { 
+        count++; 
+        temp = temp->next; 
+    } 
+    return count; 
 }
+
 void display(){
-    cout<<"Data Element in the single liked list is here :";
+    cout<<"all Linked list here: ";
     Node *temp = head;
     while (temp != NULL)
     {
+        count++;
         cout<<temp->data<<" ";
         temp = temp->next;
-    }
+    }   
 }
 
 int main()
 {
-    Insert(10);
-    Insert(20);
-    Insert(30);
-    InsertEnd(40);
+    InsertAtFirst(60);
+    InsertAtFirst(40);
+    InsertAtFirst(10);
+    InsertAtFirst(20);
+    InsertAtFirst(30);
     display();
+    cout<<endl;
+    int size = getCount();
+    cout<<"The size is This: "<<size;
     return 0;
 }

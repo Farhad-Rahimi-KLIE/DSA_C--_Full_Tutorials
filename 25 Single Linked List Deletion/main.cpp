@@ -25,8 +25,7 @@ void deleteFirstNode(){
     }
     Node *temp = head;
     head = head->next;
-    delete temp;
-    
+    delete temp;    
 }
 
 void deleteLastNode(){
@@ -76,9 +75,7 @@ void deleteNodeAtPosition(int position){
     Node *next = temp->next->next;
     delete temp->next;
     temp->next = next;
-    
-    
-     
+  
 }
 
 void Print(){

@@ -54,6 +54,21 @@ void InsertAtPosition(int pos, int n){
     temp->next = newNode;
 }
 
+int getCount() 
+{ 
+    // Initialize count 
+    int count = 0; 
+ 
+    // Initialize current 
+    Node *temp = head;
+    while (temp != NULL) 
+    { 
+        count++; 
+        temp = temp->next; 
+    } 
+    return count; 
+}
+
 void Print(){
     cout<<"Data Element in the single liked list is here :";
     Node *temp = head;
@@ -75,5 +90,7 @@ int main()
     // InsertAtEnd(20);
     InsertAtPosition(3, 67);
     Print();
+    int size = getCount();
+    cout<<"The size is This: "<<size;
     return 0;
 }
