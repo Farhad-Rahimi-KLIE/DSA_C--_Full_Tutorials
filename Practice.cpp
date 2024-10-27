@@ -33,15 +33,30 @@ int getCount()
     return count;
 }
 
-void display()
-{
-    cout << "all Linked list here: ";
+int SearchLinkedList(int key){
     Node *temp = head;
-    while (temp != NULL)
+    int pos = 1;
+    while (temp!=NULL)
     {
-        cout << temp->data << " ";
+        if (temp->data == key)
+        {
+            return pos;
+        }
         temp = temp->next;
+        pos++;
+        
     }
+    return -1;  
+}
+
+void Traverse(){
+    Node *temp = head;
+    cout<<"Heres the Linked List:"<<endl;
+    while (temp!= NULL)
+    {
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    } 
 }
 
 int main()
@@ -51,7 +66,15 @@ int main()
     InsertAtFirst(10);
     InsertAtFirst(20);
     InsertAtFirst(30);
-    display();
+    Traverse();
+    int result = SearchLinkedList(30);
+    if (result == -1)
+    {
+        cout<<"Element not found in the list"<<endl;
+    }else{
+        cout<<"Element found at position"<<result<<" in the list"<<endl;
+    }
+    
     cout << endl;
     int size = getCount();
     cout << "The size is This: " << size;
