@@ -8,6 +8,7 @@ struct Node
     Node *next;
     Node *prev;
 };
+
 Node *head = NULL;
 
 void Insert(int n)
@@ -77,8 +78,6 @@ void InsertAtPosition(int pos, int n)
     temp->next->prev = newNode;   
     }
     temp->next = newNode;
-    
-    
 }
 
 void Print()
