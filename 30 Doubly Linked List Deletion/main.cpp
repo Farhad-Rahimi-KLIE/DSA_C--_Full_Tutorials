@@ -35,9 +35,7 @@ void DeleteAtBeginning(){
     {
         head->prev = NULL;
     }
-    delete temp;
-    
-    
+    delete temp; 
 }
 
 void DeleteAtEnd(){
