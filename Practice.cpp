@@ -1,42 +1,27 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
+// Circular Singly Linked List
 
 struct Node
 {
     int data;
     Node *next;
-    Node *prev;
 };
 
 Node *head = NULL;
 
-int getCount(){
-    int count = 0;
-    Node *temp = head;
-    while (temp != NULL)
+void InsertFirst(int n){
+    Node *newNode = new Node;
+    newNode->data = n;
+    if (head == NULL)
     {
-        count++;
-        temp = temp->next;
+        head = newNode;
+        newNode->next = head;
     }
-    return count; 
-}
-
-void Traversing(){
-    Node *temp = head;
-    cout<<"All Linked List"<<endl;
-    while (temp != NULL)
-    {
-        cout<<temp->data<<" ";
-        temp = temp->next;
-    } 
 }
 
 int main()
 {
-    Traversing();
-    cout<<endl;
-    int Count = getCount();
-    cout<<"Size of Linked List is : "<<Count<<endl;
     return 0;
 }
