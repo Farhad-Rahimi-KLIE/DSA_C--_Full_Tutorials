@@ -44,9 +44,7 @@ void Delete(){
         }else{
             front++;
         }
-        
-    }
-    
+    } 
 }
 
 void display(){
