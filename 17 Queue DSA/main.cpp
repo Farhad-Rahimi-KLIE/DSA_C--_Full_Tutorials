@@ -71,13 +71,13 @@ int main()
     // Delete();
     // Delete();
     int y = peak();
+    display();
     if (y == 0)
     {
         cout<<"Queue is Empty"<<endl;
     }else{
         cout<<"Front element of the queue is"<<y;
     }
-    display();
     
     return 0;
 }

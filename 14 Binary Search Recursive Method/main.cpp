@@ -21,10 +21,8 @@ int arr[10], n, x;
         else
         {
             BinarySearch(mid +1, high);
-        }
-        
+        }    
     }
-    
    }
 
 int main()
